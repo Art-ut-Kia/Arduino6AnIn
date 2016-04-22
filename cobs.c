@@ -23,8 +23,8 @@ void cobs_cod(char* src, unsigned char len, char* dst) {
 //------------------------------------------------------------------------------
 void cobs_dec(char* src, unsigned char len, char* dst) {
    char* end = src + len;
-	 while (src < end) {
-	    unsigned char i, c = *src++;
+   while (src < end) {
+      unsigned char i, c = *src++;
       for (i = 1; i < c; i++) *dst++ = *src++;
       if (c < 0xff) *dst++ = 0;
    }
